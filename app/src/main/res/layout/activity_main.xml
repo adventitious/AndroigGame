@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doPlay"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <Button
+        android:id="@+id/buttonBlue"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:background="@drawable/style_circular_button_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRed"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:background="@drawable/style_circular_button_red"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonBlue"
+        app:layout_constraintEnd_toStartOf="@+id/buttonYellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonBlue" />
+
+    <Button
+        android:id="@+id/buttonYellow"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:background="@drawable/style_circular_button_yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonRed"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGreen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonRed"
+        app:layout_constraintTop_toTopOf="@+id/buttonRed" />
+
+    <Button
+        android:id="@+id/buttonGreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/style_circular_button_green"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonYellow"
+        app:layout_constraintTop_toTopOf="@+id/buttonYellow" />
+
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toStartOf="@+id/tvScore"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlay" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLevel"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
